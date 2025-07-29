@@ -71,8 +71,3 @@ Support for custom database dialects (PostgreSQL, MySQL, etc.)
 Schema extraction from live DBs or DDL scripts
 
 SQL execution and result rendering
-
-Question:
-how many customers have same first name?
-
-Return only the SQL query. [/INST] SELECT c.name, COUNT(c.customer_id) AS COUNT FROM customers c WHERE c.name ilike 'John%' GROUP BY c.name HAVING COUNT(c.customer_id) > 1 ORDER BY COUNT DESC NULLS LAST;
